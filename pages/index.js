@@ -17,10 +17,8 @@ export default function Home() {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      {/* Navbar */}
       <Navbar setIsFilterOpen={setIsFilterOpen} />
 
-      {/* Filtreleme Popup */}
       <FilterPopup
         isOpen={isFilterOpen}
         setIsOpen={setIsFilterOpen}
@@ -29,10 +27,8 @@ export default function Home() {
         setSelectedCategory={setSelectedCategory}
       />
 
-      {/* Başlık */}
       <h1 className="text-2xl font-bold text-center mt-4">Popüler Turlar</h1>
 
-      {/* Kategoriler */}
       <div className="overflow-x-auto whitespace-nowrap flex gap-2 p-2 px-4">
         {categories.map((category) => (
           <button
@@ -40,7 +36,7 @@ export default function Home() {
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 rounded-md transition-all duration-300 ${
               selectedCategory === category
-                ? "bg-orange-500 text-white" // Seçili kategori vurgulama
+                ? "bg-orange-500 text-white"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
           >
@@ -49,7 +45,6 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Turların Listelenmesi */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         {filteredTours.map((tour) => (
           <TourCard key={tour.id} tour={tour} />

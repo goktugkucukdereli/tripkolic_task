@@ -4,13 +4,10 @@ const Navbar = ({ setIsFilterOpen }) => {
   return (
     <nav className="bg-orange-500 p-4 flex justify-between items-center text-white shadow-md">
       <div className="flex items-center gap-3">
-        {/* Hamburger Menü */}
         <button className="text-2xl" onClick={() => setIsFilterOpen(true)}>☰</button>
-        {/* Tripkolic Yazısı */}
         <h1 className="text-lg font-bold">Tripkolic</h1>
       </div>
 
-      {/* Favoriler, Sepet, Giriş */}
       <div className="flex gap-4">
         <button className="flex items-center gap-2">
           ❤️ <span className="hidden md:block">Favoriler</span>
